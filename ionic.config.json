@@ -1,0 +1,7 @@
+{
+  "name": "AquiHayConQueAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
