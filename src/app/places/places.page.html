@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Restaurantes</ion-title>
+    <ion-title>Comercios</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
 <ion-list>
-  <ion-item *ngFor="let place of places" [routerLink]="['/places', place.id]">
+  <ion-item color="warning" *ngFor="let place of places" [routerLink]="['/places', place.id]">
     <ion-avatar slot="start">
       <ion-img [src]="place.imageURL"></ion-img>
     </ion-avatar>

@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
   <ion-grid class="ion-no-padding">
     <ion-row>
       <ion-col class="ion-no-padding">
@@ -21,11 +21,11 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-list *ngIf="place.Comments && place.Comments.length > 0; else noComments">
-          <ion-item *ngFor="let comment of place.Comments">
+        <ion-card *ngIf="place.Comments && place.Comments.length > 0; else noComments">
+          <ion-item class="ion-text-justify" *ngFor="let comment of place.Comments">
             {{comment}}
           </ion-item>
-        </ion-list>
+        </ion-card>
         <ng-template #noComments>
           <ion-text>
             <p class="ion-text-center">No comments yet</p>
