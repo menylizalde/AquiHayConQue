@@ -1,21 +1,104 @@
-<ion-header>
+<ion-header id="header">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/places"></ion-back-button>
     </ion-buttons>
-    <ion-title> {{place.title}} </ion-title>
+    <ion-title id="Headertitle" class="ion-text-center"> {{place.title}} </ion-title>
   </ion-toolbar>
+  <div>
+    <img src="/assets/img/portada.jpg" alt="">
+  </div>
 </ion-header>
 
-<ion-content color="primary">
-  <ion-grid class="ion-no-padding">
+
+<ion-content>
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon md="caret-forward" ios="chevron-forward-circle-outline">
+        <a href=""></a>
+      </ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="facebook">
+        <ion-icon name="logo-facebook"><a href=""></a></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="instagram">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="whatsapp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+  <ion-card id="cardcontain">
+  
+    <ion-card-header>
+      <img [src]="place.imageURL" alt="ion">
+    </ion-card-header>
+    <ion-card-content id="comments" class="ion-text-center">
+      {{place.Comments}}
+    </ion-card-content>
+    
+
+    <ion-slides>
+      <ion-slide>
+        <img src="./../../../assets/img/AQUI_NUEVO1_Mesa de trabajo 1.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../../assets/img/AQUI_NUEVO1_Mesa de trabajo 1.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../../assets/img/AQUI_NUEVO1_Mesa de trabajo 1.png" alt="">
+      </ion-slide>
+
+    </ion-slides>
+  
+  
+    <!-- <ion-footer class="ion-text-center">
+      <ion-row>
+        <ion-col center text-center>
+          <button id="whatsapp">
+            <ion-icon id="wpicon" name="logo-whatsapp"></ion-icon>
+            <div>449-</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button id="facebook">
+            <a href="">
+              <ion-icon id="wpicon" name="logo-facebook"></ion-icon>
+            </a>
+            
+            <div>ahja</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button id="instagram">
+            <ion-icon id="wpicon" name="logo-instagram"></ion-icon>
+            <div>11h ago</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-footer> -->
+  </ion-card>
+
+  
+  
+
+
+
+  <!-- <ion-grid class="ion-no-padding">
     <ion-row>
       <ion-col class="ion-no-padding">
         <ion-img [src]="place.imageURL"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
+      <ion-col id="cardTitle">
         <h1 class="ion-text-center"> {{place.title}} </h1>
       </ion-col>
     </ion-row>
@@ -34,6 +117,18 @@
         
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
+  <ion-card id="cardInfo" *ngIf="place.Comments && place.Comments.length > 0; else noComments">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">{{place.Contacto}}</ion-card-title>
+    </ion-card-header>
+    <ion-item id="address" class="ion-text-justify">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2201.498425013712!2d-102.28248562448582!3d21.878190898837772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ed1b18101bc3%3A0x418854f7541e6d34!2sCaf%C3%A9%20Barizzimo%20Barra%20de%20Caf%C3%A9!5e0!3m2!1ses!2smx!4v1594930414160!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </ion-item>
+  </ion-card>
+
+
+  
+  
 
 </ion-content>

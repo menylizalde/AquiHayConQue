@@ -1,0 +1,63 @@
+#Headertitle {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+#cardTitle {
+  color: #0ad1e8;
+}
+#cardcontain {
+  background: radial-gradient(
+    circle,
+    rgba(28, 114, 184, 1) 0%,
+    rgba(58, 198, 255, 1) 100%
+  );
+}
+
+#contact{
+    color: white;
+
+}
+
+#social {
+  align-items: center;
+  background-color: #3b5999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#whatsapp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #25d366;
+}
+#wpicon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+#facebook {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3b5999;
+}
+#instagram {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+#comments{
+  color: blanchedalmond;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
